@@ -68,8 +68,8 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
+   spec.ios.deployment_target = "11.0"
+   spec.osx.deployment_target = "10.15"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
@@ -133,6 +133,11 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  spec.dependency "Alamofire"
   spec.dependency "DialogflowModels"
+  spec.dependency "SwiftJWT"
+  spec.dependency "AnyCodable-FlightSchool"
+
+  spec.static_framework = true
 
 end

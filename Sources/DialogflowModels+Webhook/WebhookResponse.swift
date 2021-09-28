@@ -16,14 +16,19 @@ public struct WebhookResponse: Codable {
     public var fulfillmentMessages: [Message]?
     public var outputContexts: [Context]?
     public var followupEventInput: EventInput?
-//    public var sessionEntityTypes
+    public var sessionEntityTypes: [SessionEntityType]?
     
     public init() {
         self.fulfillmentMessages = []
     }
     
-    public init(fulfillmentMessages: [Message]? = nil, outputContexts: [Context]? = nil) {
+    public init(fulfillmentMessages: [Message], outputContexts: [Context]? = nil) {
         self.fulfillmentMessages = fulfillmentMessages
+        self.outputContexts = outputContexts
+    }
+    
+    public init(followupEventInput: EventInput, outputContexts: [Context]? = nil) {
+        self.followupEventInput = followupEventInput
         self.outputContexts = outputContexts
     }
 

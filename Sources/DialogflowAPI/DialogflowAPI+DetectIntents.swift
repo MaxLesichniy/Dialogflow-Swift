@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import DialogflowModels
 
 public extension DialogflowAPI {
     

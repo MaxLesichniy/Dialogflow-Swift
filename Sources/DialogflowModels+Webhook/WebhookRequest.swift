@@ -20,4 +20,19 @@ public struct WebhookRequest: Codable {
     public var queryResult: QueryResult
     
     public var session: String
+    
+    public var originalDetectIntentRequest: OriginalDetectIntentRequest?
+}
+
+
+public extension WebhookRequest {
+    
+    struct OriginalDetectIntentRequest: Codable {
+        
+        public var source: String?
+        
+        public var payload: AnyCodable?
+
+    }
+    
 }

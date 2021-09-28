@@ -21,7 +21,7 @@ public struct SessionPath {
         self.environmentId = environmentId
     }
     
-    func makePath() -> String {
+    public func makePath() -> String {
         return "projects/\(projectId)/agent/environments/\(environmentId ?? "draft")/users/\(userId ?? "-")/sessions/\(sessionId)"
     }
 }

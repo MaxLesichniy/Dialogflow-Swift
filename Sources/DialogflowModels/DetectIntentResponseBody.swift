@@ -70,7 +70,7 @@ public extension DetectIntentResponseBody {
          - false if the matched intent has required parameters and not all of the required parameter values have been collected.
          - true if all required parameter values have been collected, or if the matched intent doesn't contain any required parameters.
          */
-        public var allRequiredParamsPresent: Bool
+        public var allRequiredParamsPresent: Bool?
         
         /// The text to be pronounced to the user or shown on the screen. Note: This is a legacy field, fulfillmentMessages should be preferred.
         public var fulfillmentText: String?

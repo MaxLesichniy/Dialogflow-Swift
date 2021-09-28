@@ -75,8 +75,13 @@ public extension DetectIntentsRequestBody {
             }
         }
         
-        public init() {
-            
+        public init(payload: AnyCodable, resetContexts: Bool = false) {
+            self.payload = payload
+            self.resetContexts = resetContexts
+        }
+        
+        public init(payload: [String: Any], resetContexts: Bool = false) {
+            self.init(payload: AnyCodable(payload), resetContexts: resetContexts)
         }
         
     }
